@@ -154,7 +154,7 @@ if __name__ == '__main__':
 
     array_of_dict = []
 
-    for index, data in enumerate(map(DBLP, files)):
+    for index, data in enumerate(p.imap(DBLP, files, args.chunk_size)):
         array_of_dict.append(data)
 
     write_output_csv(array_of_dict)
