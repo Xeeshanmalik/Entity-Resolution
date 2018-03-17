@@ -1,0 +1,14 @@
+idDBLP,title,authors,venue,year,row_id
+conf/vldb/RusinkiewiczKTWM95,Towards a Cooperative Transaction Model - The Cooperative Activity Model,"M Rusinkiewicz, W Klas, T Tesch, J W_sch, P Muth",VLDB,1995,1
+journals/sigmod/EisenbergM02,SQL/XML is Making Good Progress,"A Eisenberg, J Melton",SIGMOD Record,2002,2
+conf/vldb/AmmannJR95,Using Formal Methods to Reason about Semantics-Based Decompositions of Transactions,"P Ammann, S Jajodia, I Ray",VLDB,1995,3
+journals/sigmod/Liu02,Editor's Notes,L Liu,SIGMOD Record,2002,4
+journals/sigmod/Hammer02,Report on the ACM Fourth International Workshop on Data Warehousing and OLAP (DOLAP 2001),N/A,N/A,2002,5
+conf/vldb/FerrandinaMZFM95,Schema and Database Evolution in the O2 Object Database System,"F Ferrandina, T Meyer, R Zicari, G Ferran, J Madec",VLDB,1995,6
+conf/vldb/SubietaKL95,Procedures in Object-Oriented Query Languages,"K Subieta, Y Kambayashi, J Leszczylowski",VLDB,1995,7
+journals/sigmod/BargaL02,Phoenix Project: Fault-Tolerant Applications,"R Barga, D Lomet",SIGMOD Record,2002,8
+journals/sigmod/Ouksel02,Mining the World Wide Web: An Information Search Approach - Book Review,N/A,N/A,2002,9
+conf/vldb/MoserKK95,L/MRP: A Buffer Management Strategy for Interactive Continuous Data Flows in a Multimedia DBMS,"F Moser, A Kraiss, W Klas",VLDB,1995,10
+journals/sigmod/Konig-RiesMMPPRSVW02,Report on the NSF Workshop on Building an Infrastructure for Mobile and Wireless Systems,N/A,N/A,2002,11
+conf/vldb/ChaudhuriGS95,Retrieval of Composite Multimedia Objects,"S Chaudhuri, S Ghandeharizadeh, C Shahabi",VLDB,1995,12
+journals/sigmod/Kosch02,MPEG-7 and Multimedia Database Systems,H Kosch,SIGMOD Record,2002,13
