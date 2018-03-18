@@ -66,6 +66,7 @@ def de_duplicates(cluster_memberships, filename):
 
 '''Writing output to the csv files'''
 
+
 def write_output_csv(array_of_dicts, ):
 
     dblp_dict = array_of_dicts[0]
