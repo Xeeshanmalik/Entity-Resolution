@@ -159,13 +159,13 @@ if __name__ == '__main__':
     else:
         unique_id = 0
 
-    DBLP = compose(partial(deduplicates, cluster_membership))
+    deduplicate = compose(partial(de_duplicates, cluster_membership))
     files = [args.dblp_file, args.scholar_file]
     p = Pool(args.number_of_processes)
 
     array_of_dict = []
 
-    for index, data in enumerate(p.imap(DBLP, files, args.chunk_size)):
+    for index, data in enumerate(p.imap(deduplicate, files, args.chunk_size)):
         array_of_dict.append(data)
 
     write_output_csv(array_of_dict)
