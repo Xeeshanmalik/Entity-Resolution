@@ -1,4 +1,4 @@
-##Entity Resolution
+## Entity Resolution ##
 
 "Entity Resolution" is the problem of identifying which records in a database
 represent the same entity. When dealing with user data, it is often difficult to
