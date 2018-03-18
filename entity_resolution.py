@@ -11,6 +11,9 @@ from toolz.functoolz import compose
 from functools import partial
 
 
+'''Function to pre-process data before training'''
+
+
 def pre_process(column):
     noise = ['\n', '-', '/', "'", ",", ":", ' +', ":"]
     column = unidecode(column)
@@ -20,6 +23,8 @@ def pre_process(column):
     if not column:
         column = None
     return column
+
+'''Read data from the input files into the dictionaries'''
 
 
 def read_data(file_name, data_d):
@@ -34,12 +39,16 @@ def read_data(file_name, data_d):
 
     return data_d
 
+'''Merging two values with the underscore to write into the output'''
+
 
 def merge(item1, item2):
     return item1 + '_' + item2
 
+'''Filtering linkage records from the files'''
 
-def extract_sets(cluster_memberships, filename):
+
+def de_duplicates(cluster_memberships, filename):
     linkage_dict = {}
     with open(filename) as f:
         reader = csv.reader(f)
@@ -54,6 +63,8 @@ def extract_sets(cluster_memberships, filename):
 
     return linkage_dict
 
+
+'''Writing output to the csv files'''
 
 def write_output_csv(array_of_dicts, ):
 
@@ -148,7 +159,7 @@ if __name__ == '__main__':
     else:
         unique_id = 0
 
-    DBLP = compose(partial(extract_sets, cluster_membership))
+    DBLP = compose(partial(deduplicates, cluster_membership))
     files = [args.dblp_file, args.scholar_file]
     p = Pool(args.number_of_processes)
 
