@@ -59,18 +59,18 @@ def write_output_csv(array_of_dicts, ):
 
     dblp_dict = array_of_dicts[0]
     scholar_dict = array_of_dicts[1]
-
     with open(args.output_file, 'w') as f:
         writer = csv.writer(f)
-        writer.writerow(('Cluster_ID', 'idDBLP', 'idScholar', 'DBLP_Match', 'Scholar_Match', 'Match_ID'))
+        writer.writerow(('idDBLP', 'idScholar', 'DBLP_Match', 'Scholar_Match', 'Match_ID'))
         len_dblp = len(dblp_dict['cluster_id'])
         len_scholar = len(scholar_dict['cluster_id'])
         for i in range(0, len_dblp):
             for j in range(0, len_scholar):
                 if dblp_dict['cluster_id'][i] == scholar_dict['cluster_id'][j]:
-                    row = (dblp_dict['cluster_id'][i], dblp_dict['id'][i], scholar_dict['id'][j],
+                    row = (dblp_dict['id'][i], scholar_dict['id'][j],
                            dblp_dict['match'][i],
                            scholar_dict['match'][j], merge(dblp_dict['match'][i], scholar_dict['match'][j]))
+                    print(row)
                     writer.writerow(row)
                     break
 
@@ -78,8 +78,8 @@ def write_output_csv(array_of_dicts, ):
 if __name__ == '__main__':
 
     parser = argparse.ArgumentParser(description='Perform Entity Resolution')
-    parser.add_argument('-db', '--dblp_file', type=str, default='DBLP.csv')
-    parser.add_argument('-sc', '--scholar_file', type=str, default='Scholar.csv')
+    parser.add_argument('-db', '--dblp_file', type=str, default='DBLP_test.csv')
+    parser.add_argument('-sc', '--scholar_file', type=str, default='Scholar_test.csv')
     parser.add_argument('-tf', '--training_file', default='data_matching_training.json')
     parser.add_argument('-sf', '--setting_file', default='data_matching_learned_settings')
     parser.add_argument('-of', '--output_file', default='data_matching_output.csv')
@@ -133,7 +133,7 @@ if __name__ == '__main__':
 
     print("Clustering")
 
-    linked_records = linker.match(dblp_file, scholar_file, 0)
+    linked_records = linker.match(dblp_file, scholar_file, threshold=0.5)
 
     print('# duplicate sets', len(linked_records))
 
