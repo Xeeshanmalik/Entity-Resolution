@@ -23,6 +23,13 @@ when you have data that can contain multiple records that can all refer to the s
 entity across datasets. It is for sure harder for this API to compete with latest deep 
 networks.
 
+**Run Code**
+
+````
+chmod +x ./run-training.sh
+./run-training.sh
+````
+
 **Description of Steps**
 
 1) Basic noise removal in both the datasets.
