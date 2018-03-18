@@ -57,10 +57,10 @@ networks.
 9) In the end, the output will be saved in the file named DBLP_Scholar_perfectMapping_[Zeeshan_Malik].csv
 
 
-Assumptions:-
+**Assumptions**:-
 
 The training for the complete two files is a bit time consuming. For fast check there are subsets from 
-both the files ending with test. The code is configure with it. To run training on original files you
+both the files ending with test. The code is configured with it. To run training on original files you
 need to pass the name of both the files as parameter to the code.
 
 
