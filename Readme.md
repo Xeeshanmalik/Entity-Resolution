@@ -55,7 +55,7 @@ chmod +x ./run-training.sh
    and predicates to a file object. The second file contains labeled examples to a file
    object.
 
-7) After training linker.match() runs to find probabilistic duplicates between two
+7) After training linker.match() runs to find probabilistic references between two
    datasets based on the defined threshold.
 
 8) Finally scripts to find links between both the datasets will be exectued based on 
