@@ -20,7 +20,7 @@ data may be characterized by:-
 To resolve deduplicate python API is used for active learning de-duplication.
 This API could be considered as one of the potential choice for initial investigation 
 when you have data that can contain multiple records that can all refer to the same 
-entity across datasets. Its for sure harder for this API to compete with latest deep 
+entity across datasets. It is for sure harder for this API to compete with latest deep 
 networks.
 
 **Description of Steps**
@@ -55,6 +55,13 @@ networks.
    the predicted clusters from the algorithm.
    
 9) In the end, the output will be saved in the file named DBLP_Scholar_perfectMapping_[Zeeshan_Malik].csv
+
+
+Assumptions:-
+
+The training for the complete two files is a bit time consuming. For fast check there are subsets from 
+both the files ending with test. The code is configure with it. To run training on original files you
+need to pass the name of both the files as parameter to the code.
 
 
 
