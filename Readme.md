@@ -70,7 +70,18 @@ The training for the complete two files is a bit time consuming. For fast check 
 both the files ending with test. The code is configured with it. To run training on original files you
 need to pass the name of both the files as parameter to the code.
 
+**Other Potential Links For Entity Resolution**
 
+1) http://infolab.stanford.edu/serf/ (SERF Project has developed a generic infrastructure for entity
+   resolution.) (The solution is coded in java and open source as well :) ) (https://github.com/trevorprater/serf)
+   
+2) https://github.com/larsga/Duke (Duke is a fast and flexible deduplication engine written in Java)
+
+3) https://github.com/YannBrrd/elasticsearch-entity-resolution This project is an interactive entity resolution
+   plugin for Elasticsearch based on Duke.
+
+4) https://link.springer.com/book/10.1007%2F978-3-642-31164-2 Concepts and Techniques for Record Linkage, Entity
+   Resolution and duplicate detection.
 
  
 
