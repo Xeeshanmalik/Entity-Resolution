@@ -18,3 +18,6 @@ journals/sigmod/Kosch02,MPEG-7 and Multimedia Database Systems,H Kosch,SIGMOD Re
 conf/vldb/MoserKK95,L/MRP: A Buffer Management Strategy for Interactives Continuous Data Flows in a Multimedia DBMS,"F Moser, A Kraiss, W Klas",VLDB,1995,15
 journals/sigmod/Konig-RiesMMPPRSVW02,Report on the NSF Workshop on Building an Infrastructures for Mobile and Wireless Systems,N/A,N/A,2002,16
 conf/vldb/ChaudhuriGS95,Retrieval of Composite Multimedia Objects,"S Chaudhuri, S Ghandeharizadeh, C Shahabi",VLDB,1995,17
+conf/vldb/RusinkiewiczKTWM95,Towards a Cooperative Transaction Model - The Cooperative Activity Model,"M Rusinkiewicz, W Klas, T Tesch, J W_sch, P Muth",VLDB,1995,23
+journals/sigmod/EisenbergM02,SQL/XML is Making Good Progress,"A Eisenberg, J Melton",SIGMOD Record,2002,222
+conf/vldb/AmmannJR95,Using Formal Methods to Reason about Semantics-Based Decompositions of Transactions,"P Ammann, S Jajodia, I Ray",VLDB,1995,31

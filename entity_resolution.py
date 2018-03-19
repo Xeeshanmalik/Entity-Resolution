@@ -9,7 +9,7 @@ import os
 from multiprocessing import Pool
 from toolz.functoolz import compose
 from functools import partial
-
+import codecs
 
 '''Function to pre-process data before training'''
 
@@ -28,8 +28,7 @@ def pre_process(column):
 
 
 def read_data(file_name, data_d):
-    print(file_name)
-    with open(file_name) as f:
+    with codecs.open(file_name) as f:
         reader = csv.DictReader(f)
         for i, row in enumerate(reader):
             clean_row = dict([(k, pre_process(v)) for (k, v) in row.items()])
@@ -76,8 +75,8 @@ def write_output_csv(array_of_dicts, ):
         writer.writerow(('idDBLP', 'idScholar', 'DBLP_Match', 'Scholar_Match', 'Match_ID'))
         len_dblp = len(dblp_dict['cluster_id'])
         len_scholar = len(scholar_dict['cluster_id'])
-        for i in range(0, len_dblp):
-            for j in range(0, len_scholar):
+        for i in range(1, len_dblp):
+            for j in range(1, len_scholar):
                 if dblp_dict['cluster_id'][i] == scholar_dict['cluster_id'][j]:
                     row = (dblp_dict['id'][i], scholar_dict['id'][j],
                            dblp_dict['match'][i],
