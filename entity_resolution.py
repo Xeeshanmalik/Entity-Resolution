@@ -95,8 +95,8 @@ def write_output_csv(array_of_dicts, ):
 if __name__ == '__main__':
 
     parser = argparse.ArgumentParser(description='Perform Entity Resolution')
-    parser.add_argument('-db', '--dblp_file', type=str, default='dblp.csv')
-    parser.add_argument('-sc', '--scholar_file', type=str, default='scholar.csv')
+    parser.add_argument('-db', '--dblp_file', type=str, default='dblp_chunk.csv')
+    parser.add_argument('-sc', '--scholar_file', type=str, default='scholar_chunk.csv')
     parser.add_argument('-tf', '--training_file', default='data_matching_training.json')
     parser.add_argument('-sf', '--setting_file', default='data_matching_learned_settings')
     parser.add_argument('-of', '--output_file', default='DBLP_Scholar_perfectMapping_[Zeeshan_Malik].csv')
