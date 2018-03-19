@@ -38,7 +38,7 @@ def read_data(file_name, data_d):
 
     return data_d
 
-'''Merging two values with the underscore to write into the output'''
+'''Merging two values with the underscore to write to the output csv file'''
 
 
 def merge(item1, item2):
@@ -49,10 +49,16 @@ def merge(item1, item2):
 
 def de_duplicates(cluster_memberships, filename):
     linkage_dict = {}
+    header_unwritten = True
     with open(filename) as f:
         reader = csv.reader(f)
         for row_id, row in enumerate(reader):
             cluster_details = cluster_memberships.get(filename + str(row_id))
+
+            if header_unwritten:
+                reader.next()
+                header_unwritten = False
+
             if cluster_details is not None:
                 cluster_id, score = cluster_details
                 linkage_dict.setdefault('cluster_id', []).append(cluster_id)
@@ -89,8 +95,8 @@ def write_output_csv(array_of_dicts, ):
 if __name__ == '__main__':
 
     parser = argparse.ArgumentParser(description='Perform Entity Resolution')
-    parser.add_argument('-db', '--dblp_file', type=str, default='dblp_chunk.csv')
-    parser.add_argument('-sc', '--scholar_file', type=str, default='scholar_chunk.csv')
+    parser.add_argument('-db', '--dblp_file', type=str, default='dblp.csv')
+    parser.add_argument('-sc', '--scholar_file', type=str, default='scholar.csv')
     parser.add_argument('-tf', '--training_file', default='data_matching_training.json')
     parser.add_argument('-sf', '--setting_file', default='data_matching_learned_settings')
     parser.add_argument('-of', '--output_file', default='DBLP_Scholar_perfectMapping_[Zeeshan_Malik].csv')
